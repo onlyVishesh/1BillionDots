@@ -20,7 +20,7 @@ const Header = () => {
           <li className="logo">
             <Link to="/" onClick={handleMenuClick}>
               <h3 className="w-14">
-                <img src={ logo} alt="Logo" />
+                <img src={logo} alt="Logo" />
               </h3>
             </Link>
           </li>

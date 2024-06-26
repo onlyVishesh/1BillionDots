@@ -1,9 +1,12 @@
 import React, { useRef, useState } from "react";
 
+import carousel1 from "../assets/carousel1.jpeg"
+import carousel2 from "../assets/carousel2.jpeg"
+import carousel3 from "../assets/carousel3.jpeg"
+
 const images = [
-  "src/assets/carousel1.jpeg",
-  "src/assets/carousel2.jpeg",
-  "src/assets/carousel3.jpeg",
+  carousel1,carousel2,
+  carousel3,
 ];
 
 const Carousel = () => {
