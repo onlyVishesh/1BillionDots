@@ -2,6 +2,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpg"
 
 const Header = () => {
   const checkboxRef = useRef(null);
@@ -19,7 +20,7 @@ const Header = () => {
           <li className="logo">
             <Link to="/" onClick={handleMenuClick}>
               <h3 className="w-14">
-                <img src="src/assets/logo.jpg" alt="Logo" />
+                <img src={ logo} alt="Logo" />
               </h3>
             </Link>
           </li>
