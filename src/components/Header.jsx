@@ -2,7 +2,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.jpg"
+import logo from "../assets/logo.jpg";
 
 const Header = () => {
   const checkboxRef = useRef(null);
@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header className="mb-auto">
-      <nav className="z-20 w-full bg-white dark:border-gray-600">
+    <header className=" mb-28">
+      <nav className="fixed top-0 z-20 w-full bg-white dark:border-gray-600">
         <ul className="navigation relative mx-auto flex max-w-[95vw] flex-wrap items-center justify-between py-4">
           <li className="logo">
             <Link to="/" onClick={handleMenuClick}>
