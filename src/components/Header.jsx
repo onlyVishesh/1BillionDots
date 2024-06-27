@@ -1,10 +1,11 @@
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 
 const Header = () => {
+  const location = useLocation();
   const checkboxRef = useRef(null);
 
   const handleMenuClick = () => {
@@ -12,6 +13,8 @@ const Header = () => {
       checkboxRef.current.checked = false;
     }
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="mb-28">
@@ -32,32 +35,32 @@ const Header = () => {
           />
           <ul className="menu flex [&>li>a]:relative [&>li>a]:text-center [&>li>a]:text-lg [&>li>a]:font-medium [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li]:pl-8">
             <li>
-              <Link to="/" onClick={handleMenuClick}>
+              <Link to="/" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/") ? "text-orange-500" : ""}`}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={handleMenuClick}>
+              <Link to="/about" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/about") ? "text-orange-500" : ""}`}>
                 About
               </Link>
             </li>
             <li>
-              <Link to="/gallery" onClick={handleMenuClick}>
+              <Link to="/gallery" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/gallery") ? "text-orange-500" : ""}`}>
                 Gallery
               </Link>
             </li>
             <li>
-              <Link to="/service" onClick={handleMenuClick}>
+              <Link to="/service" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/service") ? "text-orange-500" : ""}`}>
                 Service
               </Link>
             </li>
             <li>
-              <Link to="/blog" onClick={handleMenuClick}>
+              <Link to="/blog" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/blog") ? "text-orange-500" : ""}`}>
                 Blogs
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={handleMenuClick}>
+              <Link to="/contact" onClick={handleMenuClick} className={`hover:text-orange-500 ${isActive("/contact") ? "text-orange-500" : ""}`}>
                 Contact Us
               </Link>
             </li>
