@@ -33,7 +33,7 @@ const serviceDetails = [
 
 const Service = () => {
   return (
-    <div>
+    <div className="mb-10">
       <h1 className="text-center text-3xl font-bold uppercase">Services</h1>
       <div className="m-auto flex w-4/5 flex-wrap gap-5 items-center justify-center">
         {serviceDetails.map((service) => (

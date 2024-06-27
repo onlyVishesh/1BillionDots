@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" mb-28">
+    <header className="mb-28">
       <nav className="fixed top-0 z-20 w-full bg-white dark:border-gray-600">
         <ul className="navigation relative mx-auto flex max-w-[95vw] flex-wrap items-center justify-between py-4">
           <li className="logo">
@@ -54,6 +54,11 @@ const Header = () => {
             <li>
               <Link to="/blog" onClick={handleMenuClick}>
                 Blogs
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={handleMenuClick}>
+                Contact Us
               </Link>
             </li>
             <li>

@@ -61,7 +61,7 @@ const Process = () => {
   return (
     <div>
       <div className="flex justify-center items-center">
-      <h2 className="text-center text-6xl font-bold lg:p-32 lg:bg-orange-500 rounded-b-full">Our Processes</h2></div>
+      <h2 className="text-center md:text-6xl font-bold lg:p-32 lg:bg-orange-500 rounded-b-full text-3xl">Our Processes</h2></div>
       <div>
         <Chrono
           items={items}

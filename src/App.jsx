@@ -6,6 +6,7 @@ import MainContainer from "./components/MainContainer";
 import Gallery from "./Gallery/Gallery";
 import Home from "./Home/Home";
 import Service from "./Service/Service";
+import Contact from "./Contact/Contact";
 
 const appRouter = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const appRouter = createBrowserRouter([
       { path: "gallery", element: <Gallery /> },
       { path: "service", element: <Service /> },
       { path: "blog", element: <Blog /> },
+      { path: "contact", element: <Contact /> },
     ],
     // errorElement: <Error/>
   },

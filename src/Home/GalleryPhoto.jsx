@@ -7,7 +7,9 @@ import img3 from "../assets/img3.jpeg";
 import img4 from "../assets/img4.jpeg";
 import img5 from "../assets/img5.jpeg";
 import img6 from "../assets/img6.jpeg";
-const Gallery = () => {
+import { Link } from "react-router-dom";
+
+const GalleryPhoto = () => {
   const photos = [
     { src: img1, id: 1 },
     { src: img2, id: 2 },
@@ -50,17 +52,15 @@ const Gallery = () => {
           <img src={tempImgSrc} alt="" className="cursor-pointer" />
           <FontAwesomeIcon
             icon={faXmark}
-            className="fixed right-5 top-5 cursor-pointer text-3xl text-white md:text-5xl"
+            className="fixed right-5 top-5 cursor-pointer text-3xl md:text-5xl text-white"
             onClick={() => {
               setModel(false);
             }}
           />
         </div>
       </div>
-      <div className="mb-10">
-        <h2 className="mb-10 text-center text-3xl font-bold md:text-6xl">
-          Gallery
-        </h2>
+      <div>
+        <h2 className="text-center text-3xl font-bold md:text-6xl mb-10">Gallery</h2>
         <div className="gallery">
           {photos.map((photo) => (
             <div
@@ -72,9 +72,13 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+        <div className="flex justify-center items-center pt-10">
+          <Link to="/gallery"><button className=" text-center w-max px-2 py-2 rounded-md bg-orange-500 border-2 border-orange-500 hover:bg-transparent text-white hover:text-orange-500 duration-100">View All</button></Link>
+        </div>
+
       </div>
     </>
   );
 };
 
-export default Gallery;
+export default GalleryPhoto;

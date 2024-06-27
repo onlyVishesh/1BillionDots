@@ -14,7 +14,7 @@
 
   const Footer = () => {
     return (
-      <div className="flex w-full flex-col mt-10">
+      <div className="flex w-full flex-col mt-auto">
         <div className="flex bg-[#252839]">
           <div className="m-auto flex flex-col  items-start justify-center gap-5 px-5 py-10 text-white lg:flex-row lg:gap-16">
             <div className="flex w-72 flex-col gap-2 xs:w-80">
@@ -27,17 +27,17 @@
             <div className="flex flex-col gap-2">
               <h3 className="text-3xl font-bold">Contact Us</h3>
               <div className="text-md flex flex-col gap-2 xs:text-lg">
-                <a href="" className="flex gap-5">
+                <a href="" className="flex gap-5 hover:text-orange-500">
                   <span>
                     <FontAwesomeIcon icon={faLocationDot} />
                   </span>
-                  <p>
+                  <a href="https://www.google.com/maps/place/PLATINA+TOWER-2,+A+Block,+DLF+Phase+1,+Gurugram,+Sikanderpur+Ghosi,+Haryana+122022/@28.4802,77.092917,16z/data=!4m6!3m5!1s0x390d192f308689f7:0x9f314f9b1628a91c!8m2!3d28.4804237!4d77.0929591!16s%2Fg%2F11n6spmgsd?hl=en&entry=ttu">
                     Platina Tower-2, <br />
                     A block, DLF Phase 1, <br />
                     Gurugram, Haryana 122022
-                  </p>
+                  </a>
                 </a>
-                <a href="tel:+919811470135" className="flex gap-5">
+                <a href="tel:+919811470135" className="flex gap-5 hover:text-orange-500">
                   <span>
                     <FontAwesomeIcon icon={faPhone} />
                   </span>
@@ -45,7 +45,7 @@
                 </a>
                 <a
                   href="mailto:billionDotscompany@gmail.com"
-                  className="flex gap-5"
+                  className="flex gap-5 hover:text-orange-500"
                 >
                   <span>
                     <FontAwesomeIcon icon={faEnvelope} />
@@ -61,7 +61,7 @@
                   href="/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-600 hover:text-orange-600  "
+                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-500 hover:text-orange-500  "
                 >
                   <FontAwesomeIcon icon={faFacebookF} />
                 </a>
@@ -69,7 +69,7 @@
                   href="/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-600 hover:text-orange-600  "
+                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-500 hover:text-orange-500  "
                 >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
@@ -77,7 +77,7 @@
                   href="http://www.linkedin.com/company/1billiondots-company"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-600 hover:text-orange-600  "
+                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-500 hover:text-orange-500  "
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
@@ -85,7 +85,7 @@
                   href="https://www.instagram.com/1billiondots?igsh=N3IyZGZod3djZDNz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-600 hover:text-orange-600  "
+                  className="flex h-10 w-10 items-center justify-center border-2 border-white p-5 hover:border-orange-500 hover:text-orange-500  "
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>

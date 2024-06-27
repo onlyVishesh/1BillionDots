@@ -33,8 +33,8 @@ const blogDetails = [
 
 const Blog = () => {
   return (
-    <div>
-      <h1 className="mb-10 text-center text-3xl font-bold uppercase">
+    <div className="mb-10">
+      <h1 className="mb-10 text-center text-3xl font-bold uppercase ">
         Latest Blogs
       </h1>
       <div className="m-auto flex w-4/5 flex-wrap justify-center gap-5">

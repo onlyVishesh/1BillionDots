@@ -1,8 +1,10 @@
+import about from "../assets/carousel3.jpeg"
 const About = () => {
+
   return (
-    <div className="m-auto flex flex-col items-center justify-center gap-5 md:flex-row ">
+    <div className="m-auto flex flex-col items-center justify-center gap-5 md:flex-row mb-10">
       <img
-        src="https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"
+        src={about}
         alt="about us"
         className="aspect-square w-[300px] xs:w-[450px] lg:w-1/3"
       />
