@@ -1,87 +1,64 @@
-import { Chrono } from "react-chrono";
+import process1 from "../assets/process1.jpeg";
+import process2 from "../assets/process2.jpeg";
+import process3 from "../assets/process3.jpeg";
+import process4 from "../assets/process4.jpeg";
+import process5 from "../assets/process5.jpeg";
 
 const Process = () => {
   const items = [
     {
-      cardTitle: "Research",
-      cardSubtitle:
+      id: 1,
+      title: "Research",
+      description:
         "The pursuit of research is fundamental to human advancement. It is through research that we uncover the unknown, solve pressing problems, and lay the groundwork for future innovations.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5iCrtK2yN_XyKjPNCInDukXVquQcI96bWJSQ6zcY2gvbQf8SC",
-        },
-      },
+      src: process1,
     },
     {
-      cardTitle: "Analysis",
-      cardSubtitle:
+      id: 2,
+      title: "Analysis",
+      description:
         "A comprehensive design analysis can identify strengths, weaknesses, and opportunities for improvement, leading to more effective and impactful designs.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSRh32Eu6o5HC_6Do2NhJjJCvHwqgH7jgl3ttPNBBTiZng1hsOj",
-        },
-      },
+      src: process2,
     },
     {
-      cardTitle: "Design",
-      cardSubtitle:
+      id: 3,
+      title: "Design",
+      description:
         "Develop detailed designs and specifications. This can include digital renderings, technical drawings, and 3D models.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2MUwUEB1P4lm8_seq6nqC-juv6nOdSGWTyu3tLYGgxGe8jGC6",
-        },
-      },
+      src: process3,
     },
     {
-      cardTitle: "Development",
-      cardSubtitle:
+      id: 4,
+      title: "Development",
+      description:
         "Begin the production or development process. This may involve working with manufacturers, developers, or other professionals to bring the design to life.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQndbBRNu-_eNuo3s2UOJiXxCpzo8C3r3YlqUxiIrAsQApV17e1",
-        },
-      },
+      src: process4,
     },
     {
-      cardTitle: "Implementation",
-      cardSubtitle:
+      id: 5,
+      title: "Implementation",
+      description:
         "Implementation is a complex and dynamic process that re- quires careful planning, coordination, and execution to ensure that the final product meets all design specifications and user needs. Effective implementation involves collaboration among various teams and stakeholders, continuous monitoring, and a commitment to quality and improvement.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQOy_MNYWQz6yMToRJHiEcIc8uVAZm1J5ec3WrNh08Uthz6K_w-",
-        },
-      },
+      src: process5,
     },
   ];
   return (
     <div>
-      <div className="flex justify-center items-center">
-      <h2 className="text-center md:text-6xl font-bold lg:p-32 lg:bg-orange-500 rounded-b-full text-3xl">Our Processes</h2></div>
-      <div>
-        <Chrono
-          items={items}
-          disableToolbar="true"
-          highlightCardsOnHover="true"
-          fontSizes={{
-            cardTitle: "2rem",
-            title: "1rem",
-            cardSubtitle: "1.25rem",
-            cardText: "50rem",
-          }}
-          theme={{
-            primary: "orange",
-            secondary: "yellow",
-            titleColor: "black",
-          }}
-          mode="VERTICAL_ALTERNATING"
-          mediaHeight="500"
-          itemWidth="100"
-        />
+      <div className="flex items-center justify-center">
+        <h2 className="rounded-b-full text-center text-3xl font-bold md:text-6xl mb-10 ">
+          Our Processes
+        </h2>
+      </div>
+      <div className="flex flex-wrap justify-center gap-5  w-100% ">
+        {items.map((item) => (
+          <div key={item.id} className="flex flex-col gap-2 justify-center w-96 text-white items-center p-5 border-2 hover:scale-105 hover:cursor-pointer duration-150">
+            <img src={item.src} alt="" className="w-40"/>
+            <div className="bg-[#3A3F57] py-2">
+              <h3 className="text-2xl text-orange-500 text-center">{item.title}</h3>
+              <p className="text-center ">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
